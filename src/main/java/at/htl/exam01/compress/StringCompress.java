@@ -44,12 +44,13 @@ public class StringCompress {
     public String[] readFromFile(String fileName) {
         int anzahl = 0;
         String zeile;
-        String buchstabe;
+        char buchstabe;
 
         try (Scanner scanner = new Scanner(new FileReader(fileName))) {
             while (scanner.hasNextLine()) {
                 zeile = scanner.nextLine();
-                anzahl = (int) zeile.charAt(1);
+                buchstabe = zeile.charAt(0);
+                anzahl = zeile.charAt(1);
 
             }
         } catch (FileNotFoundException e) {

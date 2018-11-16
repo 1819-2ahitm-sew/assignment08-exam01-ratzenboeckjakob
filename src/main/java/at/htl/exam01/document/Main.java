@@ -28,9 +28,16 @@ public class Main {
         String bookOne = "Buch: 'Rowlings', 'Harry Potter und der Stein der Weisen'";
         String email = "Email: 'Susi', 'Bewerbung', 'CoolCompany'";
         String bookTwo = "Buch: 'Tolkien', 'lordOfTheRings'";
+        String[] document = new String[3];
+
+        document[0] = bookOne;
+        document[1] = email;
+        document[2] = bookTwo;
 
 
     }
+
+
 
 
 }
