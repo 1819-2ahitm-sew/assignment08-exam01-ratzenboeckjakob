@@ -2,6 +2,7 @@ package at.htl.exam01.compress;
 
 import java.io.FileNotFoundException;
 import java.io.FileReader;
+import java.lang.reflect.Array;
 import java.util.Scanner;
 
 public class StringCompress {
@@ -43,11 +44,12 @@ public class StringCompress {
     public String[] readFromFile(String fileName) {
         int anzahl = 0;
         String zeile;
-        String[] zweiNr;
+        String buchstabe;
 
         try (Scanner scanner = new Scanner(new FileReader(fileName))) {
             while (scanner.hasNextLine()) {
                 zeile = scanner.nextLine();
+                anzahl = (int) zeile.charAt(1);
 
             }
         } catch (FileNotFoundException e) {

@@ -1,5 +1,8 @@
 package at.htl.exam01.document;
 
+import javax.swing.text.Document;
+import java.lang.reflect.Array;
+
 public class Main {
 
     /**
@@ -22,8 +25,13 @@ public class Main {
      * @param args
      */
     public static void main(String[] args) {
+        String bookOne = "Rowlings, Harry Potter und der Stein der Weisen";
+        String email = "Susi, Bewerbung, CoolCompany";
+        String bookTwo = "Tolkien, lordOfTheRings";
 
+        for (int i = 0; i < 3; i++) {
 
+        }
     }
 
 
