@@ -22,4 +22,9 @@ public class Email extends Document {
     public String getTo() {
         return to;
     }
+
+    @Override
+    public String toString() {
+        return "'" + subject + "' von '" + getAuthor() + "' an '" + to + "'";
+    }
 }

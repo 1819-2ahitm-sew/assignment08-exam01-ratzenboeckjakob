@@ -24,17 +24,32 @@ public class Main {
      * @param args
      */
     public static void main(String[] args) {
+         Book book1 = new Book("Rowlings", "Harry Potter und der Stein der Weisen");
+         Email email = new Email("Susi", "Bewerbung", "CoolCompany");
+         Book book2 = new Book("Tolkien", "lordOfTheRings");
 
-        String bookOne = "Buch: 'Rowlings', 'Harry Potter und der Stein der Weisen'";
-        String email = "Email: 'Susi', 'Bewerbung', 'CoolCompany'";
-        String bookTwo = "Buch: 'Tolkien', 'lordOfTheRings'";
-        String[] document = new String[3];
+         int anzahlEmail = 0, anzahlBook = 0;
 
-        document[0] = bookOne;
-        document[1] = email;
-        document[2] = bookTwo;
+         Document[] documents = {
+                 book1,
+                 email,
+                 book2
+         };
 
+        for (int i = 0; i < documents.length; i++) {
+            if (documents[i] instanceof Book) {
+                System.out.println("Book: " + documents[i]);
 
+                anzahlBook++;
+            } else if (documents[i] instanceof Email) {
+                System.out.println("Email: " + documents[i]);
+
+                anzahlEmail++;
+            }
+        }
+
+        System.out.println("\nAnzahl Books: " + anzahlBook);
+        System.out.println("Anzahl Email: " + anzahlEmail);
     }
 
 
